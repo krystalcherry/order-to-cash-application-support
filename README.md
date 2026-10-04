@@ -1,5 +1,5 @@
 # order-to-cash-application-support
-Business Application support case study demonstrating incident investigation, root-cause analysis, troubleshooting, and resolution of fictional order-processing issues.
+Application support case study demonstrating incident investigation, root-cause analysis, troubleshooting, and resolution of fictional order-processing issues.
 # Order-to-Cash Application Support Case Study
 
 ## Overview
