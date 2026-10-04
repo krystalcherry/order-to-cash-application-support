@@ -1,0 +1,64 @@
+# Incident 001 — Special Character Validation Failure
+
+## Incident Summary
+
+**Incident ID:** INC-001
+**Application:** Acme Order Management System
+**Process:** Order-to-Cash
+**Severity:** Medium
+**Status:** Resolved
+
+### Reported Issue
+
+A user reported that Order #10452 failed during the order validation stage and could not continue through the Order-to-Cash process.
+
+## Initial Symptoms
+
+* Order was successfully created.
+* Order failed during validation.
+* Transaction did not progress to the approval stage.
+* User was unable to complete normal order processing.
+
+## Investigation
+
+The following information was reviewed:
+
+* Order number
+* Customer information
+* Product information
+* Required transaction fields
+* Validation error message
+* Recent successful orders
+* Data entered into affected fields
+
+The affected order was compared with similar orders that had successfully completed validation.
+
+## Pattern Identified
+
+The investigation identified a recurring pattern involving unsupported special characters within transaction data.
+
+Similar validation failures occurred when certain special characters were entered into fields that expected standard alphanumeric information.
+
+## Root Cause
+
+The order contained an unsupported special character in transaction data, causing the application's validation rules to reject the transaction.
+
+## Resolution
+
+The invalid character was removed or replaced with an accepted character, and the order was resubmitted for processing.
+
+The transaction successfully passed validation after the correction.
+
+## Verification
+
+The order was monitored after resubmission to confirm that it progressed to the next stage of the Order-to-Cash workflow.
+
+## Preventive Recommendation
+
+Document the application's character requirements within the order-entry procedure and provide guidance to users on acceptable data-entry formats.
+
+## Support Takeaway
+
+The initial symptom was an order-processing failure. The underlying root cause was a data-validation condition.
+
+Identifying the recurring pattern made it possible to address the cause rather than repeatedly treating each failed order as an isolated incident.
