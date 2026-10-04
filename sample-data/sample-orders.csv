@@ -1,0 +1,16 @@
+Order_ID,Status,Failure_Type,Field_Issue,Attachment_Status,Resolution
+10041,Successful,None,None,Accepted,None
+10042,Successful,None,None,Accepted,None
+10043,Failed,Validation,Unsupported special character,Accepted,Character corrected
+10044,Successful,None,None,Accepted,None
+10045,Failed,Validation,Character limit exceeded,Accepted,Field value shortened
+10046,Successful,None,None,Accepted,None
+10047,Failed,Attachment,None,Rejected,Attachment replaced
+10048,Successful,None,None,Accepted,None
+10049,Failed,Validation,Unsupported special character,Accepted,Character corrected
+10050,Successful,None,None,Accepted,None
+10051,Failed,Validation,Character limit exceeded,Accepted,Field value shortened
+10052,Successful,None,None,Accepted,None
+10053,Failed,Attachment,None,Rejected,Attachment replaced
+10054,Successful,None,None,Accepted,None
+10055,Failed,Validation,Unsupported special character,Accepted,Character corrected
