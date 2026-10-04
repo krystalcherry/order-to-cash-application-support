@@ -1,0 +1,67 @@
+# Incident 002 — Character-Length Validation Failure
+
+## Incident Summary
+
+**Incident ID:** INC-002
+**Application:** X-Corp Order Management System
+**Process:** Order-to-Cash
+**Severity:** Medium
+**Status:** Resolved
+
+### Reported Issue
+
+A user reported that Order #10783 could not be submitted for processing because the transaction failed validation.
+
+## Initial Symptoms
+
+* Order information appeared complete.
+* Required fields were populated.
+* Submission resulted in a validation failure.
+* Order could not progress to the approval stage.
+
+## Investigation
+
+The following areas were reviewed:
+
+* Required fields
+* Field values
+* Error message
+* Character length of affected fields
+* Similar successful transactions
+* Application field requirements
+
+The affected transaction was compared with previously successful orders.
+
+## Pattern Identified
+
+The affected field contained significantly more characters than comparable successful transactions.
+
+Additional review indicated that the application enforced a maximum character length for that field.
+
+## Root Cause
+
+The transaction failed because the value entered into the affected field exceeded the application's permitted character limit.
+
+## Resolution
+
+The field value was shortened while retaining the necessary business information.
+
+The order was then resubmitted and successfully passed validation.
+
+## Verification
+
+The transaction was monitored after resubmission to confirm successful progression through the Order-to-Cash workflow.
+
+## Preventive Recommendation
+
+Document field-length requirements within the order-entry procedure and include the limitation in the support knowledge base.
+
+Where appropriate, users should be encouraged to use concise standardized descriptions rather than entering unnecessary information.
+
+## Support Takeaway
+
+The error initially appeared to be a general order-submission problem.
+
+Reviewing the failed transaction against successful transactions revealed a specific data condition that explained the failure.
+
+This demonstrates the importance of comparing failed transactions with successful examples when investigating application issues.
