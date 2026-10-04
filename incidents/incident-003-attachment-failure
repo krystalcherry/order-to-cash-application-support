@@ -1,0 +1,63 @@
+# Incident 003 — Document Attachment Failure
+
+## Incident Summary
+
+**Incident ID:** INC-003
+**Application:** X-Corp Order Management System
+**Process:** Order-to-Cash
+**Severity:** Medium
+**Status:** Resolved
+
+### Reported Issue
+
+A user reported that Order #10921 could not progress through the Order-to-Cash workflow after supporting documentation was added to the transaction.
+
+## Initial Symptoms
+
+* Order information was complete.
+* Required supporting documentation had been provided.
+* Transaction could not progress to the next processing stage.
+* User reported an error associated with the document attachment.
+
+## Investigation
+
+The following items were reviewed:
+
+* Order status
+* Required documentation
+* Attachment presence
+* Attachment file type
+* Attachment naming
+* Attachment size
+* Error message
+* Similar successful transactions
+
+The affected transaction was compared with orders containing successfully processed attachments.
+
+## Pattern Identified
+
+The failed transaction contained an attachment that did not meet the application's document requirements.
+
+The issue was isolated to the attachment rather than the order data itself.
+
+## Root Cause
+
+The transaction failed because the supporting document did not meet the application's attachment requirements.
+
+## Resolution
+
+The document was corrected or replaced with an acceptable version and attached to the order.
+
+The transaction was then resubmitted for processing.
+
+## Verification
+
+The order successfully progressed after the corrected attachment was added.
+
+## Preventive Recommendation
+
+Document attachment requirements within the support knowledge base, including accepted file types, naming requirements, and applicable file-size limitations.
+
+## Support Takeaway
+
+When an application transaction fails after a document is added, the investigation should consider the document itself as a potential source of the failure rather than assuming the underlying transaction data is incorrect.
