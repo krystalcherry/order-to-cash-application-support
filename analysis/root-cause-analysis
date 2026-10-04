@@ -1,0 +1,87 @@
+# Root Cause Analysis
+
+## Overview
+
+The incidents in this case study demonstrate how application support can move beyond resolving individual user-reported problems and identify recurring conditions that cause transaction failures.
+
+Across the three incidents, the investigation focused on identifying the difference between the initial symptom and the underlying root cause.
+
+## Incident Comparison
+
+| Incident | Initial Symptom              | Root Cause                                    | Resolution                                    |
+| -------- | ---------------------------- | --------------------------------------------- | --------------------------------------------- |
+| INC-001  | Order failed validation      | Unsupported special character                 | Corrected invalid character and resubmitted   |
+| INC-002  | Order could not be submitted | Field exceeded permitted character length     | Shortened field value and resubmitted         |
+| INC-003  | Order could not progress     | Supporting document did not meet requirements | Corrected/replaced attachment and resubmitted |
+
+## Common Investigation Pattern
+
+Although the incidents involved different conditions, each investigation followed a similar process:
+
+1. Identify where the transaction failed.
+2. Review the reported error and affected transaction.
+3. Validate the transaction data.
+4. Compare the failed transaction with successful transactions.
+5. Identify a recurring or unusual condition.
+6. Determine the most likely root cause.
+7. Apply an appropriate correction.
+8. Verify that the transaction successfully progressed.
+9. Document the resolution and recommend preventive action.
+
+## Key Findings
+
+The incidents demonstrate several important application-support concepts:
+
+### 1. Symptoms Are Not Always the Root Cause
+
+A user may report that an order "will not process," but that description does not identify why the application rejected the transaction.
+
+The underlying cause may be a specific data condition, validation rule, workflow condition, or supporting document.
+
+### 2. Comparing Successful and Failed Transactions Can Reveal Patterns
+
+Comparing a failed transaction with a similar successful transaction provides a practical way to identify differences that may explain the failure.
+
+This approach can help support teams identify recurring issues without immediately assuming that the application itself is defective.
+
+### 3. Recurring Errors Can Become Knowledge-Base Opportunities
+
+When the same type of failure occurs repeatedly, the resolution should be documented so future support requests can be handled more efficiently.
+
+Examples include:
+
+* Data-entry requirements
+* Character restrictions
+* Field-length limitations
+* Attachment requirements
+* Common validation failures
+* Workflow troubleshooting steps
+
+### 4. Verification Is Part of the Resolution
+
+Correcting the suspected cause is not enough.
+
+The transaction should be monitored after the correction to confirm that it successfully progresses through the expected workflow.
+
+## Support Perspective
+
+This case study demonstrates a structured approach to application support:
+
+**User reports problem → Investigate → Identify pattern → Determine root cause → Resolve → Verify → Document → Prevent recurrence**
+
+The goal is not simply to make an individual transaction work. Effective application support also looks for patterns that can reduce repeat incidents, improve documentation, and make future troubleshooting more efficient.
+
+## Skills Demonstrated
+
+* Application Support
+* Incident Investigation
+* Root-Cause Analysis
+* Data Validation
+* Error Pattern Recognition
+* Business Process Troubleshooting
+* Issue Documentation
+* Troubleshooting Runbooks
+* Knowledge Management
+* Process Improvement
+* User Support
+* Escalation Judgment
